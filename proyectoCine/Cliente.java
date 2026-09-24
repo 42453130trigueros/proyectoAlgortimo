@@ -1,4 +1,5 @@
 public class Cliente {
+    private String codigoCliente;
     private String datosCliente;
     private String direccion;
     private int edad;
@@ -7,8 +8,10 @@ public class Cliente {
     private String nivelMenbresia;
 
     // construtor
-    public Cliente(String datosCliente, String direccion, int edad, String telefono, String sexo,
+    public Cliente(String codigoCliente, String datosCliente, String direccion, int edad, String telefono, String sexo,
             String nivelMenbresia) {
+
+        this.codigoCliente = codigoCliente;
         this.datosCliente = datosCliente;
         this.direccion = direccion;
 
@@ -29,6 +32,10 @@ public class Cliente {
     }
 
     // getters
+    public String getCodigoCliente() {
+        return codigoCliente;
+    }
+
     public String getDatosCliente() {
         return datosCliente;
     }
@@ -54,6 +61,10 @@ public class Cliente {
     }
 
     // setters
+    public void setCodigoCliente(String codigoCliente) {
+        this.codigoCliente = codigoCliente;
+    }
+
     public void setDatosCliente(String datosCliente) {
         this.datosCliente = datosCliente;
     }
@@ -81,6 +92,7 @@ public class Cliente {
     // metodo sin parametros
     void mostrarCliente() {
         System.out.println("==========================================");
+        System.out.println("Codigo del Cliente \t:" + codigoCliente);
         System.out.println("Datos del Cliente \t:" + datosCliente);
         System.out.println("Direccion \t\t:" + direccion);
         System.out.println("Edad  \t\t\t:" + edad);

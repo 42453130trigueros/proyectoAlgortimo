@@ -1,4 +1,5 @@
 public class Pelicula {
+    private String codigoPelicula;
     private String tituloPelicula;
     private String genero;
     private String duracion;
@@ -6,7 +7,9 @@ public class Pelicula {
     private double precioEntrada;
 
     // contructor
-    public Pelicula(String tituloPelicula, String genero, String duracion, String clasificacion, double precioEntrada) {
+    public Pelicula(String codigoPelicula, String tituloPelicula, String genero, String duracion, String clasificacion,
+            double precioEntrada) {
+        this.codigoPelicula = codigoPelicula;
         this.tituloPelicula = tituloPelicula;
         this.genero = genero;
         this.duracion = duracion;
@@ -22,6 +25,10 @@ public class Pelicula {
     }
 
     // getters
+    public String getCodigoPelicula() {
+        return codigoPelicula;
+    }
+
     public String getTituloPelicula() {
         return tituloPelicula;
     }
@@ -43,6 +50,10 @@ public class Pelicula {
     }
 
     // setters
+    public void setCodigoPelicula(String codigoPelicula) {
+        this.codigoPelicula = codigoPelicula;
+    }
+
     public void setTituloPelicula(String tituloPelicula) {
         this.tituloPelicula = tituloPelicula;
     }
@@ -66,11 +77,12 @@ public class Pelicula {
     // metodo sin parametros
     void mostrarPelicula() {
         System.out.println("==========================================");
+        System.out.println("Codigo de Pelicula \t:" + codigoPelicula);
         System.out.println("Titulo de Pelicula \t:" + tituloPelicula);
         System.out.println("Genero \t\t\t:" + genero);
         System.out.println("Duracion  \t\t:" + duracion);
         System.out.println("Clasificacion  \t\t:" + clasificacion);
         System.out.println("Precio de Entrada \t:" + precioEntrada);
-        
+
     }
 }

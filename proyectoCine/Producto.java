@@ -1,4 +1,5 @@
 public class Producto {
+    private String codigoProducto;
     private String nombreProducto;
     private String categoria;
     private double precioProducto;
@@ -6,7 +7,8 @@ public class Producto {
     private double promocion;
 
     // constructor
-    public Producto(String nombreProducto, String categoria, double precioProducto, int stock, double promocion) {
+    public Producto(String codigoProducto, String nombreProducto, String categoria, double precioProducto, int stock, double promocion) {
+        this.codigoProducto = codigoProducto;
         this.nombreProducto = nombreProducto;
         this.categoria = categoria;
 
@@ -25,6 +27,9 @@ public class Producto {
     }
 
     // getters
+    public String getCodigoProducto() {
+        return codigoProducto;
+    }
     public String getNombreProducto() {
         return nombreProducto;
     }
@@ -46,6 +51,10 @@ public class Producto {
     }
 
     // setters
+    public void setCodigoProducto(String codigoProducto) {
+        this.codigoProducto = codigoProducto;
+    }
+
     public void setPrecioProducto(double precioProducto) {
         if (precioProducto > 0) {
             this.precioProducto = precioProducto;
@@ -67,6 +76,7 @@ public class Producto {
     //metodo sin parametros
         void mostrarProducto() {
         System.out.println("==========================================");
+        System.out.println("Codigo del Producto \t:" + codigoProducto);
         System.out.println("Nombre del Producto \t:" + nombreProducto);
         System.out.println("Categoria del Producto \t:" + categoria);
         System.out.println("Precio  \t\t:" + precioProducto);
