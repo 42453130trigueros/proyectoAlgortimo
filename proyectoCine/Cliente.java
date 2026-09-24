@@ -91,5 +91,16 @@ public class Cliente {
     }
 
     // metodo con parametros
+    public double calcularDescuentoCliente(double precioEntrada) {
+        double descuento = 0;
+
+        if (nivelMenbresia.equals("Regular")) {
+            descuento = precioEntrada * 0.20;
+        } else if (nivelMenbresia.equals("Premiun")) {
+            descuento = precioEntrada * 0.10;
+        }
+
+        return descuento;
+    }
 
 }
