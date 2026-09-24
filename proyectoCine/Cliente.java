@@ -7,7 +7,8 @@ public class Cliente {
     private String nivelMenbresia;
 
     // construtor
-    public Cliente(String datosCliente, String direccion, int edad, String telefono, String sexo, String nivelMenbresia) {
+    public Cliente(String datosCliente, String direccion, int edad, String telefono, String sexo,
+            String nivelMenbresia) {
         this.datosCliente = datosCliente;
         this.direccion = direccion;
 
@@ -17,11 +18,11 @@ public class Cliente {
 
         this.telefono = telefono;
 
-        if (sexo == "M" || sexo == "F") {
+        if (sexo.equals("M") || sexo.equals("F")) {
             this.sexo = sexo;
         }
 
-        if (nivelMenbresia == "Regular" || nivelMenbresia == "Premiun") {
+        if (nivelMenbresia.equals("Regular") || nivelMenbresia.equals("Premiun")) {
             this.nivelMenbresia = nivelMenbresia;
         }
 
@@ -86,10 +87,9 @@ public class Cliente {
         System.out.println("Telefono  \t\t:" + telefono);
         System.out.println("Sexo \t\t\t:" + sexo);
         System.out.println("Nivel Menbresia \t:" + nivelMenbresia);
-        
+
     }
 
     // metodo con parametros
 
 }
-
