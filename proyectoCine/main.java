@@ -10,6 +10,11 @@ public class main {
         System.out.println("==============Cliente 02==================");
         cliente2.mostrarCliente();
 
+        Cliente cliente3 = new Cliente("C003", "Luis Rojas", "av prologacion iquitos 1968", 42, "00958550", "M",
+                "Regular");
+        System.out.println("==============Cliente 03==================");
+        cliente3.mostrarCliente();
+
         System.out.println("==========================================");
         Producto producto1 = new Producto("PR001", "SUBLIME", "CHOCOLATE", 3.50, 1500, 0.25);
         System.out.println("==============Producto 01=================");
