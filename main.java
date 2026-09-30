@@ -39,6 +39,8 @@ public class main {
                 "2hrs 30min", "+13", 22.00, 5.00);
         System.out.println("=============Pelicula 03================");
         pelicula3.mostrarPelicula();
-
+        ClienteRegular cliente4 = new ClienteRegular(null, null, null, 0, null, null, null, 0);
+        System.out.println("==============Cliente 04==================");
+        cliente4.mostrarCliente();
     }
 }
