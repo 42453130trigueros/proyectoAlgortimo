@@ -7,7 +7,8 @@ public class Producto {
     private double promocion;
 
     // constructor
-    public Producto(String codigoProducto, String nombreProducto, String categoria, double precioProducto, int stock, double promocion) {
+    public Producto(String codigoProducto, String nombreProducto, String categoria, double precioProducto, int stock,
+            double promocion) {
         this.codigoProducto = codigoProducto;
         this.nombreProducto = nombreProducto;
         this.categoria = categoria;
@@ -30,6 +31,7 @@ public class Producto {
     public String getCodigoProducto() {
         return codigoProducto;
     }
+
     public String getNombreProducto() {
         return nombreProducto;
     }
@@ -73,17 +75,16 @@ public class Producto {
         }
     }
 
-    //metodo sin parametros
-        void mostrarProducto() {
+    // metodo sin parametros
+    public void mostrarProducto() {
         System.out.println("==========================================");
         System.out.println("Codigo del Producto \t:" + codigoProducto);
         System.out.println("Nombre del Producto \t:" + nombreProducto);
         System.out.println("Categoria del Producto \t:" + categoria);
         System.out.println("Precio  \t\t:" + precioProducto);
-        System.out.println("Stock  \t\t\t:" +stock);
-        System.out.println("% Promocion \t\t:" + (promocion*100)+"%");
-        
-    }
+        System.out.println("Stock  \t\t\t:" + stock);
+        System.out.println("% Promocion \t\t:" + (promocion * 100) + "%");
 
+    }
 
 }

@@ -90,7 +90,7 @@ public class Cliente {
     }
 
     // metodo sin parametros
-    void mostrarCliente() {
+    public void mostrarCliente() {
         System.out.println("==========================================");
         System.out.println("Codigo del Cliente \t:" + codigoCliente);
         System.out.println("Datos del Cliente \t:" + datosCliente);
