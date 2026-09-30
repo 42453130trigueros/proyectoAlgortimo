@@ -35,5 +35,10 @@ public class main {
         Entrada entrada2 = new Entrada(cliente2, pelicula2, 5);
         entrada2.mostrarResumenVenta();
 
+        PeliculaEstreno pelicula3 = new PeliculaEstreno("P003", "Avengers", "Accion",
+                "2hrs 30min", "+13", 22.00, 5.00);
+        System.out.println("=============Pelicula 03================");
+        pelicula3.mostrarPelicula();
+
     }
 }
