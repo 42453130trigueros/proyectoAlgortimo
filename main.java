@@ -35,10 +35,36 @@ public class main {
         Entrada entrada2 = new Entrada(cliente2, pelicula2, 5);
         entrada2.mostrarResumenVenta();
 
+        // Willian Quinto (PELICULAS)
         PeliculaEstreno pelicula3 = new PeliculaEstreno("P003", "Avengers", "Accion",
                 "2hrs 30min", "+13", 22.00, 5.00);
         System.out.println("=============Pelicula 03================");
         pelicula3.mostrarPelicula();
+        // William Quinto
+
+        // Aaron Valdez (PRODUCTOS)
+        Dulces productoDulce = new Dulces("PR002", "Chocolatina", "Dulces", 2.50, 1000, 0.15, "Chocolate");
+
+        System.out.println("==============Producto 02=================");
+        productoDulce.mostrarProducto();
+
+        Bebida productoBebida = new Bebida("PR003", "Coca-Cola", "Bebidas", 3.00, 500, 0.10, "Cola");
+
+        System.out.println("==============Producto 03=================");
+        productoBebida.mostrarProducto();
+
+        Canchita productoCanchita = new Canchita("PR004", "Papas Fritas", "Snacks", 2.00, 800, 0.12, "Original");
+
+        System.out.println("==============Producto 04=================");
+        productoCanchita.mostrarProducto();
+
+        Combo productoCombo = new Combo("PR005", "Combo 1", "Combos", 10.00, 200, 0.20,
+                "Incluye entrada, bebida y snack");
+
+        System.out.println("==============Producto 05=================");
+        productoCombo.mostrarProducto();
+
+        // Aaron Valdez (PRODUCTOS)
 
     }
 }
