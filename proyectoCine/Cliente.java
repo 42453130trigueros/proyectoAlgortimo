@@ -25,7 +25,7 @@ public class Cliente {
             this.sexo = sexo;
         }
 
-        if (nivelMenbresia.equals("Regular") || nivelMenbresia.equals("Premiun")) {
+        if (nivelMenbresia.equals("Regular") || nivelMenbresia.equals("Premiun") || nivelMenbresia.equals("VIP")) {
             this.nivelMenbresia = nivelMenbresia;
         }
 
@@ -108,7 +108,7 @@ public class Cliente {
 
         if (nivelMenbresia.equals("Regular")) {
             descuento = precioEntrada * 0.10;
-        } else if (nivelMenbresia.equals("Premiun")) {
+        } else if (nivelMenbresia.equals("Premiun") || nivelMenbresia.equals("VIP")) {
             descuento = precioEntrada * 0.30;
         }
 

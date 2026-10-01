@@ -22,6 +22,10 @@ public class main {
                 System.out.println("==============Producto 01=================");
                 producto1.mostrarProducto();
 
+                Producto producto2 = new Producto("PR002", "COCA-COLA", "BEBIDA", 4.00, 1000, 0);
+                System.out.println("==============Producto 02=================");
+                producto2.mostrarProducto();
+
                 // Willian Quinto (PELICULAS)
 
                 System.out.println("==========================================");
@@ -66,6 +70,13 @@ public class main {
                 System.out.println("=======================================================");
 
                 // leonardo (ENTRADAS)
+
+                Confiteria venta1 = new Confiteria("V001", cliente1, producto2, 2);
+                venta1.mostrarResumenVenta();
+                System.out.println("=======================================================");
+                Confiteria venta2 = new Confiteria("V002", cliente2, producto1, 3);
+                venta2.mostrarResumenVenta();
+                System.out.println("=======================================================");
 
                 // Aaron Valdez (PRODUCTOS)
                 // Dulces productoDulce = new Dulces("PR002", "Chocolatina", "Dulces", 2.50,

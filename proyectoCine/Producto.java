@@ -21,7 +21,7 @@ public class Producto {
             this.stock = stock;
         }
 
-        if (promocion > 0) {
+        if (promocion >= 0) {
             this.promocion = promocion;
         }
 
