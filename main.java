@@ -22,6 +22,8 @@ public class main {
                 System.out.println("==============Producto 01=================");
                 producto1.mostrarProducto();
 
+                // Willian Quinto (PELICULAS)
+
                 System.out.println("==========================================");
                 Pelicula pelicula1 = new Pelicula("P001", "Titanic", "Drama", "3hrs", "APT", 15.50);
                 System.out.println("==============Pelicula 01=================");
@@ -31,47 +33,68 @@ public class main {
                 System.out.println("==============Pelicula 02=================");
                 pelicula2.mostrarPelicula();
 
+                PeliculaEstreno pelicula3 = new PeliculaEstreno("P003", "Avengers", "Accion", "2hrs 30min", "+13",
+                                22.00, 5.00);
+                System.out.println("==============Pelicula 03=================");
+                pelicula3.mostrarPelicula();
+
+                Pelicula3D pelicula4 = new Pelicula3D("P004", "Spiderman", "Accion", "2hrs 30min", "+13", 22.00, 3.00);
+                System.out.println("==============Pelicula 04=================");
+                pelicula4.mostrarPelicula();
+
+                // Willian Quinto (PELICULAS)
+
+                // leonardo (ENTRADAS)
+                System.out.println("=======================================================");
+                System.out.println("=======================================================");
                 Entrada entrada1 = new Entrada(cliente1, pelicula1, 3);
                 entrada1.mostrarResumenVenta();
 
                 Entrada entrada2 = new Entrada(cliente2, pelicula2, 5);
                 entrada2.mostrarResumenVenta();
 
-                // Willian Quinto (PELICULAS)
-                PeliculaEstreno pelicula3 = new PeliculaEstreno("P003", "Avengers", "Accion",
-                                "2hrs 30min", "+13", 22.00, 5.00);
-                System.out.println("=============Pelicula 03================");
-                pelicula3.mostrarPelicula();
-                // William Quinto
+                EntradaVip entrada3 = new EntradaVip(cliente3, pelicula4, 2, 4);
+                entrada3.mostrarResumenVenta();
 
-                // Aaron Valdez (PRODUCTOS)
-                Dulces productoDulce = new Dulces("PR002", "Chocolatina", "Dulces", 2.50, 1000, 0.15, "Chocolate");
+                EntradaOnline entrada4 = new EntradaOnline(cliente1, pelicula3, 2, 1.50);
+                entrada4.mostrarResumenVenta();
 
-                System.out.println("==============Producto 02=================");
-                productoDulce.mostrarProducto();
+                Entrada entrada5 = new Entrada(cliente2, pelicula3, 5);
+                entrada5.mostrarResumenVenta();
 
-                Bebida productoBebida = new Bebida("PR003", "Coca-Cola", "Bebidas", 3.00, 500, 0.10, "Cola");
-
-                System.out.println("==============Producto 03=================");
-                productoBebida.mostrarProducto();
-
-                Canchita productoCanchita = new Canchita("PR004", "Papas Fritas", "Snacks", 2.00, 800, 0.12,
-                                "Original");
-
-                System.out.println("==============Producto 04=================");
-                productoCanchita.mostrarProducto();
-
-                Combo productoCombo = new Combo("PR005", "Combo 1", "Combos", 10.00, 200, 0.20,
-                                "Incluye entrada, bebida y snack");
-
-                System.out.println("==============Producto 05=================");
-                productoCombo.mostrarProducto();
-
-                // Aaron Valdez (PRODUCTOS)
+                System.out.println("=======================================================");
+                System.out.println("=======================================================");
 
                 // leonardo (ENTRADAS)
 
-                // leonardo (ENTRADAS)
+                // Aaron Valdez (PRODUCTOS)
+                // Dulces productoDulce = new Dulces("PR002", "Chocolatina", "Dulces", 2.50,
+                // 1000, 0.15, "Chocolate");
+
+                // System.out.println("==============Producto 02=================");
+                // productoDulce.mostrarProducto();
+
+                // Bebida productoBebida = new Bebida("PR003", "Coca-Cola", "Bebidas", 3.00,
+                // 500, 0.10, "Cola");
+
+                // System.out.println("==============Producto 03=================");
+                // productoBebida.mostrarProducto();
+
+                // Canchita productoCanchita = new Canchita("PR004", "Papas Fritas", "Snacks",
+                // 2.00, 800, 0.12,
+                // "Original");
+
+                // System.out.println("==============Producto 04=================");
+                // productoCanchita.mostrarProducto();
+
+                // Combo productoCombo = new Combo("PR005", "Combo 1", "Combos", 10.00, 200,
+                // 0.20,
+                // "Incluye entrada, bebida y snack");
+
+                // System.out.println("==============Producto 05=================");
+                // productoCombo.mostrarProducto();
+
+                // Aaron Valdez (PRODUCTOS)
 
         }
 }

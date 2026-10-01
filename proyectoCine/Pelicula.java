@@ -49,6 +49,11 @@ public class Pelicula {
         return precioEntrada;
     }
 
+    // recargo de una pelicula normal: no tiene
+    public double getRecargo() {
+        return 0;
+    }
+
     // setters
     public void setCodigoPelicula(String codigoPelicula) {
         this.codigoPelicula = codigoPelicula;

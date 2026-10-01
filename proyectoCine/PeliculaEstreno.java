@@ -4,6 +4,18 @@ public class PeliculaEstreno extends Pelicula {
     public PeliculaEstreno(String codigoPelicula, String tituloPelicula, String genero, String duracion,
             String clasificacion, double precioEntrada, double recargo) {
         super(codigoPelicula, tituloPelicula, genero, duracion, clasificacion, precioEntrada);
+        if (recargo > 0) {
+            this.recargo = recargo;
+        }
+
+    }
+
+    @Override
+    public double getRecargo() {
+        return recargo;
+    }
+
+    public void setRecargo(double recargo) {
         this.recargo = recargo;
     }
 
