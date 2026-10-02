@@ -68,9 +68,9 @@ public class Entrada {
     }
 
     public void mostrarResumenVenta() {
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Resumen de Venta");
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Cliente \t\t:" + cliente.getDatosCliente());
         System.out.println("Nivel de Membresía \t:" + cliente.getNivelMenbresia());
         System.out.println("Película \t\t:" + pelicula.getTituloPelicula());
@@ -80,9 +80,9 @@ public class Entrada {
         System.out.println("Descuento Aplicado \t:S/." + getDescuentoAplicado());
         System.out.println("Recargo Aplicado \t:S/." + calcularRecargoEntrada());
         System.out.println("Total a Pagar \t\t:S/." + getTotalPagar());
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Gracias por su compra, vuelva pronto");
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Recargo de Película \t:" + pelicula.getRecargo());
     }
 

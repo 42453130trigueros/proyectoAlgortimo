@@ -1,4 +1,5 @@
 package model;
+
 public class Cliente {
     private String codigoCliente;
     private String datosCliente;
@@ -92,7 +93,7 @@ public class Cliente {
 
     // metodo sin parametros
     public void mostrarCliente() {
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Codigo del Cliente \t:" + codigoCliente);
         System.out.println("Datos del Cliente \t:" + datosCliente);
         System.out.println("Direccion \t\t:" + direccion);
@@ -108,7 +109,7 @@ public class Cliente {
         double descuento = 0;
 
         if (nivelMenbresia.equals("Regular")) {
-            descuento = precioEntrada * 0.10;
+            descuento = 0;
         } else if (nivelMenbresia.equals("Premiun") || nivelMenbresia.equals("VIP")) {
             descuento = precioEntrada * 0.30;
         }

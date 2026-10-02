@@ -78,7 +78,7 @@ public class Producto {
 
     // metodo sin parametros
     public void mostrarProducto() {
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Codigo del Producto \t:" + codigoProducto);
         System.out.println("Nombre del Producto \t:" + nombreProducto);
         System.out.println("Categoria del Producto \t:" + categoria);

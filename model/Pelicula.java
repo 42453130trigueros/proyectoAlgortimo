@@ -82,7 +82,7 @@ public class Pelicula {
 
     // metodo sin parametros
     public void mostrarPelicula() {
-        System.out.println("==========================================");
+        System.out.println("=======================================================");
         System.out.println("Codigo de Pelicula \t:" + codigoPelicula);
         System.out.println("Titulo de Pelicula \t:" + tituloPelicula);
         System.out.println("Genero \t\t\t:" + genero);
