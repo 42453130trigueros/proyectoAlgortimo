@@ -1,56 +1,53 @@
 public class Confiteria {
     private String CodigoVenta;
     private Cliente cliente;
-    private Producto producto;
-    private int cantidadProducto;
+    private Producto[] productos;
+    private int[] cantidades;
+    private int totalItems;
 
-    // constructor principal
-    public Confiteria(String CodigoVenta, Cliente cliente, Producto producto, int cantidadProducto) {
+
+    //construtor principal venta vacia , luego se agregan productos 1 o mas
+    public Confiteria(String CodigoVenta, Cliente cliente) {
         this.CodigoVenta = CodigoVenta;
         this.cliente = cliente;
-        this.producto = producto;
-        if (cantidadProducto > 0) {
-            this.cantidadProducto = cantidadProducto;
-        }
+        this.productos = new Producto[10]; // Capacidad máxima de 10 productos
+        this.cantidades = new int[10]; // Arreglo para almacenar las cantidades correspondientes
+        this.totalItems = 0; // Inicialmente no hay productos agregados
     }
 
-    // getters y setters
-    public String getCodigoVenta() {
-        return CodigoVenta;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public Producto getProducto() {
-        return producto;
-    }
-
-    public int getCantidadProducto() {
-        return cantidadProducto;
-    }
-
-    public void setCodigoVenta(String CodigoVenta) {
+    //construtor secundario cuando el cliente compra un producto
+    public Confiteria(String CodigoVenta, Cliente cliente, Producto producto, int cantidad) {   
         this.CodigoVenta = CodigoVenta;
-    }
-
-    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+        this.productos = new Producto[10]; // Capacidad máxima de 10 productos
+        this.cantidades = new int[10]; // Arreglo para almacenar las cantidades correspondientes
+        this.totalItems = 0; // Inicialmente no hay productos agregados
+        agregarProducto(producto, cantidad); // Agregar el producto y la cantidad inicial
     }
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    //metedo para agregar productos a la venta
+    public void agregarProducto(Producto producto, int cantidad) {
+        if (cantidad>0 && totalItems < productos.length) { // Verificar si hay espacio para agregar más productos
+            this.productos[totalItems] = producto;
+            this.cantidades[totalItems] = cantidad;
+            totalItems++;
+        } 
     }
-
-    // metodos
 
     public double calcularSubtotal() {
-        return producto.getPrecioProducto() * cantidadProducto;
-    }
+        double subtotal = 0.0;
+        for (int i = 0; i < totalItems; i++) {
+            subtotal += productos[i].getPrecioProducto() * cantidades[i];
+        }
+        return subtotal;
+    }   
 
     public double calcularPromocion() {
-        return producto.getPromocion() * calcularSubtotal();
+        double promocion = 0.0;
+        for (int i = 0; i < totalItems; i++) {
+            promocion += productos[i].getPrecioProducto()* cantidades[i]*productos[i].getPromocion();
+        }
+        return promocion;
     }
 
     public double calcularTotal() {
@@ -58,14 +55,15 @@ public class Confiteria {
     }
 
     public void mostrarResumenVenta() {
-        System.out.println("Codigo de venta \t:" + CodigoVenta);
-        System.out.println("Cliente \t\t:" + cliente.getDatosCliente());
-        System.out.println("Producto \t\t:" + producto.getNombreProducto());
-        System.out.println("Cantidad de productos \t:" + cantidadProducto);
-        System.out.println("Precio unitario \t:S/." + producto.getPrecioProducto());
-        System.out.println("Subtotal \t\t:S/." + calcularSubtotal());
-        System.out.println("Promoción \t\t:S/." + calcularPromocion());
-        System.out.println("Total a pagar \t\t:S/." + calcularTotal());
+        System.out.println("Codigo de Venta\t:" + CodigoVenta);
+        System.out.println("Cliente\t\t:" + cliente.getDatosCliente());
+        System.out.println("Productos Comprados:");
+        for (int i = 0; i < totalItems; i++) {
+            System.out.println(cantidades[i]+" X " + productos[i].getNombreProducto() + "\tS/. "+productos[i].getPrecioProducto());
+        }
+        System.out.println("Subtotal\t:S/." + calcularSubtotal());
+        System.out.println("Promocion\t:S/." + calcularPromocion());
+        System.out.println("Total a Pagar\t:S/." + calcularTotal());
     }
 
 }

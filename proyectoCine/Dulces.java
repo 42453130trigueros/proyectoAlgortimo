@@ -10,7 +10,7 @@ public class Dulces extends Producto {
     @Override
     public void mostrarProducto() {
         super.mostrarProducto();
-        System.out.println("Sabor \t\t:" + sabor);
+        System.out.println("Sabor \t\t\t:" + sabor);
     }
 
 }

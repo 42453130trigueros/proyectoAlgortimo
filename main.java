@@ -26,6 +26,10 @@ public class main {
                 System.out.println("==============Producto 02=================");
                 producto2.mostrarProducto();
 
+                Dulces producto3 = new Dulces("PR003", "CHOCOLATE", "DULCES", 2.50, 1000, 0.15, "Chocolate");
+                System.out.println("==============Producto 03=================");
+                producto3.mostrarProducto();
+
                 // Willian Quinto (PELICULAS)
 
                 System.out.println("==========================================");
@@ -71,41 +75,19 @@ public class main {
 
                 // leonardo (ENTRADAS)
 
-                Confiteria venta1 = new Confiteria("V001", cliente1, producto2, 2);
+                Confiteria venta1 = new Confiteria("V001", cliente1);
+                venta1.agregarProducto(producto1, 2); // venta1.totalItems = 1
+                venta1.agregarProducto(producto2, 1); // venta1.totalItems = 2
+                venta1.agregarProducto(producto3, 4); // venta1.totalItems = 3
+
+                Confiteria venta2 = new Confiteria("V002", cliente2); // venta2.totalItems = 0
+                venta2.agregarProducto(producto2, 3); // venta2.totalItems = 1
+                System.out.println("=======================================================");
+                System.out.println("=======================================================");
                 venta1.mostrarResumenVenta();
                 System.out.println("=======================================================");
-                Confiteria venta2 = new Confiteria("V002", cliente2, producto1, 3);
-                venta2.mostrarResumenVenta();
                 System.out.println("=======================================================");
-
-                // Aaron Valdez (PRODUCTOS)
-                // Dulces productoDulce = new Dulces("PR002", "Chocolatina", "Dulces", 2.50,
-                // 1000, 0.15, "Chocolate");
-
-                // System.out.println("==============Producto 02=================");
-                // productoDulce.mostrarProducto();
-
-                // Bebida productoBebida = new Bebida("PR003", "Coca-Cola", "Bebidas", 3.00,
-                // 500, 0.10, "Cola");
-
-                // System.out.println("==============Producto 03=================");
-                // productoBebida.mostrarProducto();
-
-                // Canchita productoCanchita = new Canchita("PR004", "Papas Fritas", "Snacks",
-                // 2.00, 800, 0.12,
-                // "Original");
-
-                // System.out.println("==============Producto 04=================");
-                // productoCanchita.mostrarProducto();
-
-                // Combo productoCombo = new Combo("PR005", "Combo 1", "Combos", 10.00, 200,
-                // 0.20,
-                // "Incluye entrada, bebida y snack");
-
-                // System.out.println("==============Producto 05=================");
-                // productoCombo.mostrarProducto();
-
-                // Aaron Valdez (PRODUCTOS)
+                venta2.mostrarResumenVenta();
 
         }
 }
