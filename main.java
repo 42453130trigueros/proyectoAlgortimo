@@ -17,18 +17,24 @@ public class main {
                 System.out.println("==============Cliente 03==================");
                 cliente3.mostrarCliente();
 
+                // Aaron Valdez
+
                 System.out.println("==========================================");
-                Producto producto1 = new Producto("PR001", "SUBLIME", "CHOCOLATE", 3.50, 1500, 0.25);
+                Producto producto1 = new Producto("PR001", "OREO", "COMESTIBLE", 3.50, 1500, 0.25);
                 System.out.println("==============Producto 01=================");
                 producto1.mostrarProducto();
 
-                Producto producto2 = new Producto("PR002", "COCA-COLA", "BEBIDA", 4.00, 1000, 0);
+                Producto producto2 = new Producto("PR002", "POC KOR", "COMESTIBLE", 4.00, 1000, 0);
                 System.out.println("==============Producto 02=================");
                 producto2.mostrarProducto();
 
                 Dulces producto3 = new Dulces("PR003", "CHOCOLATE", "DULCES", 2.50, 1000, 0.15, "Chocolate");
                 System.out.println("==============Producto 03=================");
                 producto3.mostrarProducto();
+
+                Bebida producto4 = new Bebida("PR004", "INKA COLA", "BEBIDA", 4.00, 1000, 0.50, 3);
+                System.out.println("==============Producto 04=================");
+                producto4.mostrarProducto();
 
                 // Willian Quinto (PELICULAS)
 
@@ -75,6 +81,7 @@ public class main {
 
                 // leonardo (ENTRADAS)
 
+                // Ristro de venta de confiteria
                 Confiteria venta1 = new Confiteria("V001", cliente1);
                 venta1.agregarProducto(producto1, 2); // venta1.totalItems = 1
                 venta1.agregarProducto(producto2, 1); // venta1.totalItems = 2
@@ -89,5 +96,24 @@ public class main {
                 System.out.println("=======================================================");
                 venta2.mostrarResumenVenta();
 
+                Confiteria venta3 = new Confiteria("V003", cliente3, producto4, 4);
+                System.out.println("=======================================================");
+                venta3.mostrarResumenVenta();
+
+                Confiteria venta4 = new Confiteria("V004", cliente1);
+                venta4.agregarProducto(producto1, 5);
+                venta4.agregarProducto(producto2, 8);
+                venta4.agregarProducto(producto3, 9);
+                venta4.agregarProducto(producto4, 6);
+                System.out.println("=======================================================");
+                venta4.mostrarResumenVenta();
+
+                Confiteria venta5 = new Confiteria("V005", cliente2);
+                venta5.agregarProducto(producto4, 2);
+                venta5.agregarProducto(producto3, 5);
+                venta5.agregarProducto(producto1, 7);
+                System.out.println("=======================================================");
+                venta5.mostrarResumenVenta();
         }
+
 }
