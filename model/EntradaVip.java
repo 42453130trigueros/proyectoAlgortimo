@@ -1,3 +1,4 @@
+package model;
 public class EntradaVip extends Entrada {
     private double costoAsientoVip;// recargo por cada entrada
 

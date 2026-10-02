@@ -1,3 +1,4 @@
+package model;
 public class EntradaOnline extends Entrada {
     private double cargoServicioOnline;// cargo fijo por la compra de entradas online
 

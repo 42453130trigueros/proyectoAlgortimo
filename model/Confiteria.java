@@ -1,3 +1,4 @@
+package model;
 public class Confiteria {
     private String CodigoVenta;
     private Cliente cliente;

@@ -1,3 +1,4 @@
+package model;
 public class Bebida extends Producto {
     private int tamano; // Tamaño de la bebida en litros
 

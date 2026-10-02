@@ -1,3 +1,4 @@
+package model;
 public class Pelicula3D extends Pelicula {
     private double recargoLentes;
 

@@ -1,3 +1,4 @@
+package model;
 public class Dulces extends Producto {
     private String sabor;
 

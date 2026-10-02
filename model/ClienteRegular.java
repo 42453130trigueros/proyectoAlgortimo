@@ -1,3 +1,4 @@
+package model;
 public class ClienteRegular extends Cliente {
     private double descuento;
 
