@@ -14,10 +14,10 @@ public class main {
                                 "Regular");
                 Cliente cliente3 = new Cliente("C003", "Luis Rojas", "av prologacion iquitos 1968", 42, "00958550", "M",
                                 "Regular");
-                ClienteVip cliente4 = new ClienteVip("C004", "Luis Angel", "av prologacion iquitos 1968", 42,
-                                "00958550", "M", "VIP", "Sala VIP con asientos reclinables");
+                ClienteVip cliente4 = new ClienteVip("C004", "Pedro Torres", "av prologacion iquitos 1968", 42,
+                                "00958550", "M", "Sala VIP con asientos reclinables");
                 ClientePremiun cliente5 = new ClientePremiun("C005", "Carla Ruiz", "av prologacion iquitos 1968", 35,
-                                "00958550", "F", "Premiun", "Acceso a preventas de estrenos");
+                                "00958550", "F", "Acceso a preventas de estrenos");
 
                 System.out.println("====================Cliente 01=========================");
                 cliente1.mostrarCliente();

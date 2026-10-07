@@ -1,11 +1,11 @@
 package model;
 
 public class ClienteVip extends Cliente {
-    private String servicioExclusivo;//"Sala VIP con asientos reclinables", "Atención personalizada"
+    private String servicioExclusivo;// "Sala VIP con asientos reclinables", "Atención personalizada"
 
     public ClienteVip(String codigoCliente, String datosCliente, String direccion, int edad, String telefono,
-            String sexo, String nivelMenbresia, String servicioExclusivo) {
-        super(codigoCliente, datosCliente, direccion, edad, telefono, sexo, nivelMenbresia);
+            String sexo, String servicioExclusivo) {
+        super(codigoCliente, datosCliente, direccion, edad, telefono, sexo, "VIP");
         this.servicioExclusivo = servicioExclusivo;
     }
 
@@ -17,10 +17,10 @@ public class ClienteVip extends Cliente {
         this.servicioExclusivo = servicioExclusivo;
     }
 
-    @Override 
+    @Override
     public void mostrarCliente() {
         super.mostrarCliente();
         System.out.println("Servicio Exclusivo \t:" + servicioExclusivo);
     }
-   
+
 }

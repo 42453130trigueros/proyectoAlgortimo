@@ -1,11 +1,11 @@
 package model;
 
 public class ClientePremiun extends Cliente {
-    private String beneficioExclusivo;//"Acceso a preventas de estrenos", "Cola rápida en confitería"
+    private String beneficioExclusivo;// "Acceso a preventas de estrenos", "Cola rápida en confitería"
 
     public ClientePremiun(String codigoCliente, String datosCliente, String direccion, int edad, String telefono,
-            String sexo, String nivelMenbresia, String beneficioExclusivo) {
-        super(codigoCliente, datosCliente, direccion, edad, telefono, sexo, nivelMenbresia);
+            String sexo, String beneficioExclusivo) {
+        super(codigoCliente, datosCliente, direccion, edad, telefono, sexo, "Premiun");
         this.beneficioExclusivo = beneficioExclusivo;
     }
 
@@ -21,7 +21,6 @@ public class ClientePremiun extends Cliente {
     public void mostrarCliente() {
         super.mostrarCliente();
         System.out.println("Beneficio Exclusivo \t:" + beneficioExclusivo);
-    }   
-
+    }
 
 }
