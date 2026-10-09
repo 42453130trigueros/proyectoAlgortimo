@@ -1,4 +1,5 @@
 package model;
+
 public class Pelicula {
     private String codigoPelicula;
     private String tituloPelicula;
@@ -15,7 +16,7 @@ public class Pelicula {
         this.genero = genero;
         this.duracion = duracion;
 
-        if (clasificacion == "APT" || clasificacion == "+18" || clasificacion == "+13") {
+        if (clasificacion.equals("APT") || clasificacion.equals("+18") || clasificacion.equals("+13")) {
             this.clasificacion = clasificacion;
         }
 
