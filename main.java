@@ -4,7 +4,7 @@ public class main {
         public static void main(String[] args) {
 
                 System.out.println("=======================================================");
-                System.out.println("============REGISTRO CLIENTES==========================");
+                System.out.println("============REGISTRO CLIENTES VEA==========================");
                 System.out.println("=======================================================");
 
                 Cliente cliente1 = new Cliente("C001", "Jose Marin", "av jose galvez 668", 30, "00958550", "M",
