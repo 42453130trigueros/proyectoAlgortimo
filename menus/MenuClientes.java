@@ -1,5 +1,7 @@
 package menus;
 
+import datos.CrudClientesVip;
+
 /**
  * Gestion de clientes: primero se elige el TIPO y luego se abre el menu CRUD.
  */
@@ -45,24 +47,39 @@ public class MenuClientes {
 
             switch (opcion) {
                 case 1:
-                    // TODO: conectar con datos.CrudClientes.registrar(tipo)
-                    System.out.println("Registrar cliente " + tipo);
+                    if (tipo.equals("VIP")) {
+                        CrudClientesVip.registrar();
+                    } else {
+                        System.out.println("Registrar cliente " + tipo); // pendiente
+                    }
                     break;
                 case 2:
-                    // TODO: conectar con listar()
-                    System.out.println("Listar cliente " + tipo);
+                    if (tipo.equals("VIP")) {
+                        CrudClientesVip.listar();
+                    } else {
+                        System.out.println("Listar cliente " + tipo); // pendiente
+                    }
                     break;
                 case 3:
-                    // TODO: conectar con buscar()
-                    System.out.println("Buscar cliente " + tipo);
+                    if (tipo.equals("VIP")) {
+                        CrudClientesVip.buscar();
+                    } else {
+                        System.out.println("Buscar cliente " + tipo); // pendiente
+                    }
                     break;
                 case 4:
-                    // TODO: conectar con actualizar()
-                    System.out.println("Actualizar cliente " + tipo);
+                    if (tipo.equals("VIP")) {
+                        CrudClientesVip.actualizar();
+                    } else {
+                        System.out.println("Actualizar cliente " + tipo); // pendiente
+                    }
                     break;
                 case 5:
-                    // TODO: conectar con eliminar()
-                    System.out.println("Eliminar cliente " + tipo);
+                    if (tipo.equals("VIP")) {
+                        CrudClientesVip.eliminar();
+                    } else {
+                        System.out.println("Eliminar cliente " + tipo); // pendiente
+                    }
                     break;
                 case 0:
                     break;

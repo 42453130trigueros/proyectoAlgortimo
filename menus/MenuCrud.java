@@ -22,6 +22,8 @@ public class MenuCrud {
         System.out.println("5. Eliminar");
         System.out.println("0. Regresar");
         System.out.print("Seleccione una opcion: ");
-        return teclado.nextInt();
+        int opcion = teclado.nextInt();
+        teclado.nextLine(); // consume el Enter para que los CRUD puedan usar nextLine()
+        return opcion;
     }
 }

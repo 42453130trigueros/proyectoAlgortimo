@@ -1,6 +1,10 @@
 package model;
 
-public class Pelicula {
+import java.io.Serializable;
+
+public class Pelicula implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String codigoPelicula;
     private String tituloPelicula;
     private String genero;

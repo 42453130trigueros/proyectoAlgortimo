@@ -1,5 +1,9 @@
 package model;
-public class Producto {
+
+import java.io.Serializable;
+public class Producto implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String codigoProducto;
     private String nombreProducto;
     private String categoria;
@@ -58,6 +62,14 @@ public class Producto {
         this.codigoProducto = codigoProducto;
     }
 
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     public void setPrecioProducto(double precioProducto) {
         if (precioProducto > 0) {
             this.precioProducto = precioProducto;
@@ -71,7 +83,7 @@ public class Producto {
     }
 
     public void setPromocion(double promocion) {
-        if (promocion > 0) {
+        if (promocion >= 0) {
             this.promocion = promocion;
         }
     }

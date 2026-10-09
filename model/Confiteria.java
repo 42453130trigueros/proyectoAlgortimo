@@ -1,5 +1,9 @@
 package model;
-public class Confiteria {
+
+import java.io.Serializable;
+public class Confiteria implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String CodigoVenta;
     private Cliente cliente;
     private Producto[] productos;
