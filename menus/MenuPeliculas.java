@@ -1,11 +1,16 @@
 package menus;
 
+import datos.CrudPeliculas;
+import datos.CrudPeliculas3D;
+import datos.CrudPeliculasEstreno;
+
 /**
- * Gestion de peliculas: primero se elige el TIPO y luego se abre el menu CRUD.
+ * Gestion de peliculas: primero se elige el TIPO de pelicula
+ * (Normal, Estreno, 3D) y luego se abre el menu CRUD.
  */
 public class MenuPeliculas {
 
-    // Submenu: elegir el tipo
+    // Submenu: elegir el tipo de pelicula
     public static void mostrar() {
         int opcion;
         do {
@@ -45,24 +50,49 @@ public class MenuPeliculas {
 
             switch (opcion) {
                 case 1:
-                    // TODO: conectar con datos.CrudPeliculas.registrar(tipo)
-                    System.out.println("Registrar pelicula " + tipo);
+                    if (tipo.equals("NORMAL")) {
+                        CrudPeliculas.registrar();
+                    } else if (tipo.equals("ESTRENO")) {
+                        CrudPeliculasEstreno.registrar();
+                    } else if (tipo.equals("3D")) {
+                        CrudPeliculas3D.registrar();
+                    }
                     break;
                 case 2:
-                    // TODO: conectar con listar()
-                    System.out.println("Listar pelicula " + tipo);
+                    if (tipo.equals("NORMAL")) {
+                        CrudPeliculas.listar();
+                    } else if (tipo.equals("ESTRENO")) {
+                        CrudPeliculasEstreno.listar();
+                    } else if (tipo.equals("3D")) {
+                        CrudPeliculas3D.listar();
+                    }
                     break;
                 case 3:
-                    // TODO: conectar con buscar()
-                    System.out.println("Buscar pelicula " + tipo);
+                    if (tipo.equals("NORMAL")) {
+                        CrudPeliculas.buscar();
+                    } else if (tipo.equals("ESTRENO")) {
+                        CrudPeliculasEstreno.buscar();
+                    } else if (tipo.equals("3D")) {
+                        CrudPeliculas3D.buscar();
+                    }
                     break;
                 case 4:
-                    // TODO: conectar con actualizar()
-                    System.out.println("Actualizar pelicula " + tipo);
+                    if (tipo.equals("NORMAL")) {
+                        CrudPeliculas.actualizar();
+                    } else if (tipo.equals("ESTRENO")) {
+                        CrudPeliculasEstreno.actualizar();
+                    } else if (tipo.equals("3D")) {
+                        CrudPeliculas3D.actualizar();
+                    }
                     break;
                 case 5:
-                    // TODO: conectar con eliminar()
-                    System.out.println("Eliminar pelicula " + tipo);
+                    if (tipo.equals("NORMAL")) {
+                        CrudPeliculas.eliminar();
+                    } else if (tipo.equals("ESTRENO")) {
+                        CrudPeliculasEstreno.eliminar();
+                    } else if (tipo.equals("3D")) {
+                        CrudPeliculas3D.eliminar();
+                    }
                     break;
                 case 0:
                     break;
