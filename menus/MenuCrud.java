@@ -2,10 +2,6 @@ package menus;
 
 import java.util.Scanner;
 
-/**
- * Menu CRUD reutilizable en todas las gestiones.
- * Devuelve: 1=Registrar 2=Listar 3=Buscar 4=Actualizar 5=Eliminar 0=Regresar
- */
 public class MenuCrud {
 
     // Un solo Scanner compartido por todos los menus
@@ -23,7 +19,7 @@ public class MenuCrud {
         System.out.println("0. Regresar");
         System.out.print("Seleccione una opcion: ");
         int opcion = teclado.nextInt();
-        teclado.nextLine(); // consume el Enter para que los CRUD puedan usar nextLine()
+        teclado.nextLine(); 
         return opcion;
     }
 }

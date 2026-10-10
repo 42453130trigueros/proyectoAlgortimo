@@ -53,8 +53,7 @@ public class Entrada implements Serializable {
     }
 
     // metodos
-    // metodo que las clases va sobreescribir para calcular el subtotal, descuento y
-    // total a pagar
+    //POLIMORFISMO
     public double calcularRecargoEntrada() {
         return pelicula.getRecargo() * cantidadEntradas;
     }

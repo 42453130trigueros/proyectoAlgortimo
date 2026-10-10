@@ -1,6 +1,8 @@
 package model;
+
 public class EntradaVip extends Entrada {
     private double costoAsientoVip;// recargo por cada entrada
+    private static final long serialVersionUID = 1L;
 
     // constructor
     public EntradaVip(Cliente cliente, Pelicula pelicula, int cantidadEntradas, double costoAsientoVip) {
@@ -23,7 +25,6 @@ public class EntradaVip extends Entrada {
     public double calcularRecargoEntrada() {
         return super.calcularRecargoEntrada() + (costoAsientoVip * getCantidadEntradas());
     }
-    
 
     @Override
     public void mostrarResumenVenta() {

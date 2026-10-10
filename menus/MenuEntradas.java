@@ -1,5 +1,7 @@
 package menus;
 
+import datos.CrudEntrada;
+
 /**
  * Gestion de entradas: primero se elige el TIPO y luego se abre el menu CRUD.
  */
@@ -13,8 +15,8 @@ public class MenuEntradas {
             System.out.println("          GESTION DE ENTRADAS");
             System.out.println("=========================================");
             System.out.println("1. Entrada normal");
-            System.out.println("2. Entrada VIP");
-            System.out.println("3. Entrada Online");
+            System.out.println("2. Entrada con asiento VIP");
+            System.out.println("3. Entrada comprada online");
             System.out.println("0. Regresar");
             System.out.print("Seleccione una opcion: ");
             opcion = MenuCrud.teclado.nextInt();
@@ -45,24 +47,19 @@ public class MenuEntradas {
 
             switch (opcion) {
                 case 1:
-                    // TODO: conectar con datos.CrudEntradas.registrar(tipo)
-                    System.out.println("Registrar entrada " + tipo);
+                    CrudEntrada.registrar(tipo);
                     break;
                 case 2:
-                    // TODO: conectar con listar()
-                    System.out.println("Listar entrada " + tipo);
+                    CrudEntrada.listar(tipo);
                     break;
                 case 3:
-                    // TODO: conectar con buscar()
-                    System.out.println("Buscar entrada " + tipo);
+                    CrudEntrada.buscar(tipo);
                     break;
                 case 4:
-                    // TODO: conectar con actualizar()
-                    System.out.println("Actualizar entrada " + tipo);
+                    CrudEntrada.actualizar(tipo);
                     break;
                 case 5:
-                    // TODO: conectar con eliminar()
-                    System.out.println("Eliminar entrada " + tipo);
+                    CrudEntrada.eliminar(tipo);
                     break;
                 case 0:
                     break;

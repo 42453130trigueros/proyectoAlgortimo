@@ -1,6 +1,7 @@
 package model;
 public class EntradaOnline extends Entrada {
     private double cargoServicioOnline;// cargo fijo por la compra de entradas online
+    private static final long serialVersionUID = 1L;
 
     public EntradaOnline(Cliente cliente, Pelicula pelicula, int cantidadEntradas, double cargoServicioOnline) {
         super(cliente, pelicula, cantidadEntradas);
