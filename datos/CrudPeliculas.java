@@ -75,23 +75,28 @@ public class CrudPeliculas {
 
         System.out.print("Titulo [" + p.getTituloPelicula() + "]: ");
         String titulo = teclado.nextLine();
-        if (!titulo.isEmpty()) p.setTituloPelicula(titulo);
+        if (!titulo.isEmpty())
+            p.setTituloPelicula(titulo);
 
         System.out.print("Genero [" + p.getGenero() + "]: ");
         String genero = teclado.nextLine();
-        if (!genero.isEmpty()) p.setGenero(genero);
+        if (!genero.isEmpty())
+            p.setGenero(genero);
 
         System.out.print("Duracion [" + p.getDuracion() + "]: ");
         String duracion = teclado.nextLine();
-        if (!duracion.isEmpty()) p.setDuracion(duracion);
+        if (!duracion.isEmpty())
+            p.setDuracion(duracion);
 
         System.out.print("Clasificacion [" + p.getClasificacion() + "]: ");
         String clasificacion = teclado.nextLine();
-        if (!clasificacion.isEmpty()) p.setClasificacion(clasificacion);
+        if (!clasificacion.isEmpty())
+            p.setClasificacion(clasificacion);
 
         System.out.print("Precio de entrada [" + p.getPrecioEntrada() + "]: ");
         String precio = teclado.nextLine();
-        if (!precio.isEmpty()) p.setPrecioEntrada(Double.parseDouble(precio));
+        if (!precio.isEmpty())
+            p.setPrecioEntrada(Double.parseDouble(precio));
 
         ArchivoDat.guardar(ARCHIVO, lista);
         System.out.println("Pelicula actualizada.");
