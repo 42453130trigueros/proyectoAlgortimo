@@ -1,13 +1,16 @@
 package menus;
 
+import datos.CrudClientesPremiun;
+import datos.CrudClientesRegular;
 import datos.CrudClientesVip;
 
 /**
- * Gestion de clientes: primero se elige el TIPO y luego se abre el menu CRUD.
+ * Gestion de clientes: primero se elige el TIPO de cliente
+ * (Regular, Premium, VIP) y luego se abre el menu CRUD.
  */
 public class MenuClientes {
 
-    // Submenu: elegir el tipo
+    // Submenu: elegir el tipo de cliente
     public static void mostrar() {
         int opcion;
         do {
@@ -47,38 +50,48 @@ public class MenuClientes {
 
             switch (opcion) {
                 case 1:
-                    if (tipo.equals("VIP")) {
+                    if (tipo.equals("REGULAR")) {
+                        CrudClientesRegular.registrar();
+                    } else if (tipo.equals("PREMIUM")) {
+                        CrudClientesPremiun.registrar();
+                    } else if (tipo.equals("VIP")) {
                         CrudClientesVip.registrar();
-                    } else {
-                        System.out.println("Registrar cliente " + tipo); // pendiente
                     }
                     break;
                 case 2:
-                    if (tipo.equals("VIP")) {
+                    if (tipo.equals("REGULAR")) {
+                        CrudClientesRegular.listar();
+                    } else if (tipo.equals("PREMIUM")) {
+                        CrudClientesPremiun.listar();
+                    } else if (tipo.equals("VIP")) {
                         CrudClientesVip.listar();
-                    } else {
-                        System.out.println("Listar cliente " + tipo); // pendiente
                     }
                     break;
                 case 3:
-                    if (tipo.equals("VIP")) {
+                    if (tipo.equals("REGULAR")) {
+                        CrudClientesRegular.buscar();
+                    } else if (tipo.equals("PREMIUM")) {
+                        CrudClientesPremiun.buscar();
+                    } else if (tipo.equals("VIP")) {
                         CrudClientesVip.buscar();
-                    } else {
-                        System.out.println("Buscar cliente " + tipo); // pendiente
                     }
                     break;
                 case 4:
-                    if (tipo.equals("VIP")) {
+                    if (tipo.equals("REGULAR")) {
+                        CrudClientesRegular.actualizar();
+                    } else if (tipo.equals("PREMIUM")) {
+                        CrudClientesPremiun.actualizar();
+                    } else if (tipo.equals("VIP")) {
                         CrudClientesVip.actualizar();
-                    } else {
-                        System.out.println("Actualizar cliente " + tipo); // pendiente
                     }
                     break;
                 case 5:
-                    if (tipo.equals("VIP")) {
+                    if (tipo.equals("REGULAR")) {
+                        CrudClientesRegular.eliminar();
+                    } else if (tipo.equals("PREMIUM")) {
+                        CrudClientesPremiun.eliminar();
+                    } else if (tipo.equals("VIP")) {
                         CrudClientesVip.eliminar();
-                    } else {
-                        System.out.println("Eliminar cliente " + tipo); // pendiente
                     }
                     break;
                 case 0:
