@@ -5,16 +5,7 @@ import java.util.Scanner;
 import menus.MenuCrud;
 import model.ClienteVip;
 
-/**
- * PLANTILLA de CRUD con serializacion (ejemplo: clientes VIP).
- *
- * Para crear el CRUD de otro tipo:
- *   1) Copia este archivo y cambiale el nombre (ej. CrudPeliculas3D).
- *   2) Cambia ClienteVip por tu clase y el nombre del archivo .dat.
- *   3) Adapta los datos que se piden en registrar() y actualizar().
- *   4) Conectalo en tu menu (reemplaza el System.out.println pendiente).
- * Los nombres de los metodos NO se cambian: registrar, listar, buscar, actualizar, eliminar.
- */
+
 public class CrudClientesVip {
 
     private static final String ARCHIVO = "archivos/clientesVip.dat";
