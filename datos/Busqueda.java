@@ -24,6 +24,7 @@ public class Busqueda {
     private static final String[] ARCHIVOS_PELICULAS = {
             "archivos/peliculas.dat",
             "archivos/peliculasEstreno.dat",
+            "archivos/peliculasEstrenos.dat",
             "archivos/peliculas3D.dat" };
 
     // devuelve el cliente, o null si no existe en ningun archivo
